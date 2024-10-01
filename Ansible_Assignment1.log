@@ -1,0 +1,22 @@
+2024-10-01 07:26:54,823 p=19090 u=admin123 n=ansible | [WARNING]: Found variable using reserved name: name
+
+2024-10-01 07:26:54,824 p=19090 u=admin123 n=ansible | PLAY [Playbook to create a hello_world file in the hosts machines] *************
+2024-10-01 07:26:54,826 p=19090 u=admin123 n=ansible | TASK [Gathering Facts] *********************************************************
+2024-10-01 07:26:56,102 p=19090 u=admin123 n=ansible | ok: [172.16.7.129]
+2024-10-01 07:26:57,050 p=19090 u=admin123 n=ansible | ok: [172.16.7.128]
+2024-10-01 07:26:57,060 p=19090 u=admin123 n=ansible | TASK [Create a directory in the hosts machine] *********************************
+2024-10-01 07:26:57,312 p=19090 u=admin123 n=ansible | ok: [172.16.7.129]
+2024-10-01 07:26:57,314 p=19090 u=admin123 n=ansible | ok: [172.16.7.128]
+2024-10-01 07:26:57,316 p=19090 u=admin123 n=ansible | TASK [copy] ********************************************************************
+2024-10-01 07:26:57,322 p=19090 u=admin123 n=ansible | skipping: [172.16.7.128]
+2024-10-01 07:26:57,325 p=19090 u=admin123 n=ansible | skipping: [172.16.7.129]
+2024-10-01 07:26:57,327 p=19090 u=admin123 n=ansible | TASK [debug] *******************************************************************
+2024-10-01 07:26:57,336 p=19090 u=admin123 n=ansible | ok: [172.16.7.128] => {
+    "msg": "Task execution completed"
+}
+2024-10-01 07:26:57,337 p=19090 u=admin123 n=ansible | ok: [172.16.7.129] => {
+    "msg": "Task execution completed"
+}
+2024-10-01 07:26:57,353 p=19090 u=admin123 n=ansible | PLAY RECAP *********************************************************************
+2024-10-01 07:26:57,353 p=19090 u=admin123 n=ansible | 172.16.7.128               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-10-01 07:26:57,353 p=19090 u=admin123 n=ansible | 172.16.7.129               : ok=3    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   

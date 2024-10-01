@@ -1,0 +1,27 @@
+---
+- name: Playbook to create a hello_world file in the hosts machines
+  hosts: myhosts
+  become: yes
+  vars_files:
+    - vars.yml
+  tasks:
+    - block:
+        - name: Create a directory in the hosts machine
+          file:
+             path: /home/Ansible_Assignment1
+             state: directory
+          register: directory_created
+        - name:
+          copy:
+             dest: /home/Ansible_Assignment1/hello_world
+             content:
+              Hello {{ name }}
+          when: directory_created.changed 
+          
+
+      rescue:
+        - debug:
+            msg: "Error occured while creating the directory"
+      always:
+        - debug:
+            msg: "Task execution completed"
