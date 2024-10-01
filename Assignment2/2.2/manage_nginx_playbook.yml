@@ -1,0 +1,7 @@
+---
+- hosts: myhosts
+  remote_user: ansibleuser
+  become: yes
+  gather_facts: yes
+  roles:
+    - manage_nginx

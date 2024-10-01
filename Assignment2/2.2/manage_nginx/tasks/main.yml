@@ -1,0 +1,25 @@
+---
+# tasks file for manage_nginx
+- name: Update all packages to the latest version
+  yum:
+     name: "*"
+     state: latest
+  when: ansible_os_family == "RedHat"
+
+- name: Install nginx
+  yum:
+     name: nginx
+     state: latest
+  when: ansible_os_family == "RedHat"
+
+- name: Start and enable nginx service
+  service:
+     name: nginx
+     state: started
+     enabled: yes
+  when: ansible_os_family == "RedHat"
+
+- name: Enable nginx system to start on book
+  systemd:
+     name: nginx
+     enabled: yes
