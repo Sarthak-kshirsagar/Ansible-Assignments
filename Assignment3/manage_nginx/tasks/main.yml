@@ -1,0 +1,13 @@
+---
+# tasks file for manage_nginx
+- name: Install NGINX
+  manage_nginx:
+     action: install
+
+- name: Start NGINX
+  manage_nginx:
+    action: start
+
+- name: Restart NGINX
+  manage_nginx:
+    action: restart
