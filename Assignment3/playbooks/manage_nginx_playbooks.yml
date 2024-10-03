@@ -1,6 +1,0 @@
----
-- name: Playbook the install and start  the Nginx server on remote machines using custom module
-  hosts: myhosts
-  become: yes
-  roles:
-    - manage_nginx
